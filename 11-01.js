@@ -14,7 +14,9 @@ if (value === 200) {
 console.log('2' == 2);  // 文字列を数値に変換して比較する（仕様によると文字列に変換ではないらしい。）
 console.log('2' === 2); // オペランドの方が異なる
 
-// typescriptのエラーチェックによりstatusはwindows.status（非推奨）らしい
+// Window(DOM文書を収めるウインドウ).status（ステータスバーのテキスト）はHTML標準で
+// 非推奨になったのでtypescriptのエラーチェックによりマークされている
+// typescriptはstatusをグローバルのwindow.statusと判断するらしい
 const status = 200;
 if (status === 200) {
     console.log('ok!');
